@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+
+  form(method='POST' action='/new')
+    label(for='name') Name:
+    br
+    input#user(type='text' name='user')
+    br
+    label(for='message') Message:
+    br
+    input#message(type='text' name='message')
+    input(type='submit' value='Submit')

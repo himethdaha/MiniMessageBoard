@@ -1,0 +1,20 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+
+
+  
+  ul 
+    each val in messages
+     p Message From #{val.user} added on #{val.added} 
+      li #{val.text}
+      br
+    else 
+      li There are no Messages
+
+  
+    a(href='/new') New Message
+
+
